@@ -73,7 +73,7 @@
         animation()
 
         function validateForm() {
-            return validateName() && validateNumber() && validateMessage();
+            return validateName() && validateNumber();
         }
 
         function validateName(){
@@ -111,15 +111,6 @@
             return true;
         }
 
-        function validateMessage(){
-            let messageElement = document.querySelector("#p_message")
-            if(messageElement.value != 10){
-                messageElement.placeholder = "Please enter 10 characters"
-                messageElement.value = ""
-                return false
-            }
-            return true
-        }
     </script>
 </body>
 </html>
