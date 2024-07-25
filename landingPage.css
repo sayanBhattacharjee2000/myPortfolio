@@ -323,7 +323,7 @@ hr {
 .image-and-text .image {
   height: 50vh;
   width: 25vw;
-  background-image: url(./Portfilo-myImage3.jpeg);
+  background-image: url(Portfilo-myImage3.jpeg);
   clip-path: polygon(30% 0%,
       70% 0%,
       100% 30%,
