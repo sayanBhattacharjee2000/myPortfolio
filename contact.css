@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(23, 22, 22, 0.9);
+    overflow: auto;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+.small-nav{
+    text-align: center;
+    padding-top: 10vh;
+}
+.small-nav button{
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    margin-left: 1vw;
+    border-radius: 15%;
+    background-color: rgba(150, 150, 150, 0.8);
+}
+.small-nav button :hover{
+    font-size: 1.4rem;
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(45deg, #ab8989, #9f836c, #b5b386, #a1b798, #a2d0c8, #7d87b9, #a98cc7, #bd94b4, #9e6e6e);
+    transition: 0.5s;
+    padding: 0;
+}
+.small-nav button a{
+    text-decoration: none;
+    color: black;
+}
+.contact-me{
+    height: 60vh;
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.two-part{
+    display: flex;
+    height: 60vh;
+    width: 70vw;
+}
+.left-part{
+    width: 35vw;
+    height: 60vh;
+}
+.right-part{
+    height: 60vh;
+    width: 35vw;
+}
+.via-social-media{
+    text-align: center;
+    margin-top: 15vh;
+} 
+.via-social-media a{
+    text-decoration: none;
+    padding: 2rem;
+}
+.facebook-icon{
+    font-size: 2.5rem;
+    color: rgb(78, 78, 184);
+    border: 1px solid rgb(197, 175, 175);
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+.facebook-icon:hover{
+    font-size: 2.4rem;
+    background-color: #dbd2d2;
+    transition:all ease-in-out 0.3s;
+}
+.instagram-icon{
+    font-size: 2.5rem;
+    color: rgb(196, 87, 196);
+    border: 1px solid rgb(177, 148, 148);
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+.instagram-icon:hover{
+    font-size: 2.4rem;
+    background-color: rgb(203, 158, 203);
+    transition:all ease-in-out 0.3s;
+}
+.linkedIn-icon{
+    font-size: 2.5rem;
+    color: rgb(44, 44, 235);
+    border: 1px solid rgb(167, 139, 139);
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+.linkedIn-icon:hover{
+    font-size: 2.4rem;
+    background-color: rgb(223, 216, 223);
+    transition:all ease-in-out 0.3s;
+}
+.phone-number{
+    display: flex;
+    align-items: center;
+    margin-left: 9vw;
+    margin-top: 7vh;
+    gap: 0.5vw;
+}
+.phone-icon{
+    font-size: 1.8rem;
+    border-radius: 50%;
+    color: rgb(53, 203, 53);
+    font-weight: 200;
+}
+.phone-number h3{
+    color: white;
+    font-weight: 100;
+}
+.phone-number{
+    display: flex;
+    align-items: center;
+}
+.whatsapp-icon{
+    font-size: 2.5rem;
+    color: rgb(134, 11, 130);
+    font-weight: 200;
+}
+.phone-number a {
+    text-decoration: none;
+}
+.phone-number a h3:hover{
+    text-decoration: underline;
+    color: rgb(135, 135, 211);
+}
+.vertical-line{
+    width: 2px;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 0 3vw;
+}
+.right-part h3{
+    color: rgb(255, 255, 255);
+    background-image: radial-gradient(circle, #5c0067 10%, #96ccd6 100%);
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 2rem;
+    -webkit-text-stroke: 1.5px rgb(20, 20, 20);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input{
+    margin-left: 2vw;
+    height: 5vh;
+    width: 25vw;
+    border: 0;
+    border-radius: 15%;
+    margin-bottom: 3vh;
+}
+form input:hover{
+    background-color: #bed1b7;
+    scale: 1.1;
+}
+form textarea{
+    margin-left: 2vw;
+    border: 2px solid black;
+    border-radius: 5%;
+    max-height: 20vh;
+    min-height: 10vh;
+    max-width: 30vw;
+    min-width: 15vw;
+}
+form textarea:hover{
+    background-color: bisque;
+}
+form button{
+    padding: 0.5rem;
+    width: 5vw;
+    margin-top: 2vh;
+    border-radius: 15%;
+    background-color: rgb(156, 156, 218);
+}
+form button:hover{
+    background-color: grey;
+    color: white;
+    scale: 1.1;
+}
+@media(max-width: 2800px){
+    .small-nav button a{
+        font-size: 2rem;
+    }
+    .right-part h3{
+        font-size: 2.8rem;
+    }
+    form input{
+        height: 6vh;
+    }
+    form button{
+        padding: 1rem;
+        width: 6vw;
+    }
+    .phone-number{
+        margin-left: 12vw;
+    }
+}
+@media(max-width:2296px){
+    .phone-number{
+        margin-left: 11vw;
+    }
+}
+@media(max-width:1930px){
+    .phone-number{
+        margin-left: 10vw;
+    }
+}
+@media(max-width: 1800px){
+    .small-nav button a{
+        font-size: 1.7rem;
+    }
+    .right-part h3{
+        font-size: 2.3rem;
+    }
+    form input{
+        height: 5.5vh;
+    }
+    form button{
+        padding: 0.7rem;
+        width: 5.5vw;
+    } 
+}
+@media(max-width:1600px){
+    .phone-number{
+        margin-left: 9vw;
+    }
+}
+@media(max-width:1523px){
+    .small-nav button a{
+        font-size: 1.3rem;
+    }
+    .right-part h3{
+        font-size: 2rem;
+    }
+    form input{
+        height: 5vh;
+    }
+    form button{
+        padding: 0.5rem;
+        width: 5vw;
+    } 
+}
+@media(max-width:1400px){
+    .phone-number{
+        margin-left: 8.5vw;
+    }
+}
+@media(max-width:1300px){
+    .phone-number{
+        margin-left: 8vw;
+    }
+}
+@media(max-width:1200px){
+    .phone-number{
+        margin-left: 7.5vw;
+    }
+    .small-nav button a{
+        font-size: 1.1rem;
+    }
+    .right-part h3{
+        font-size: 1.8rem;
+    }
+    form input{
+        height: 4vh;
+    }
+    form button{
+        padding: 0.5rem;
+        width: 5vw;
+    } 
+}
+@media(max-width: 1199px){
+    .contact-me{
+        height: 80vh;
+        width: 70vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .two-part{
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 70vw;
+    }
+    .left-part{
+        height: 25vh;
+        width: 70vw;
+        position: relative;
+    }
+    .right-part{
+        height: 65vh;
+        width: 70vw;
+    }
+    .small-nav{
+        padding-top: 4vh;
+    }
+    .phone-number{
+        display: flex;
+        margin-top: 5vh;
+        margin-left: 26vw;
+    }
+    .vertical-line{
+        height: 0;
+        width: 0;
+    }
+    .via-social-media{
+        margin-top: 5vh;
+    }
+    form input{
+        height: 5vh;
+        width: 28vw;
+    }
+    form button{
+        padding: 0.6rem;
+        width: 7vw;
+        margin-top: 3vh;
+        border-radius: 15%;
+    }
+}
+@media(max-width: 959px){
+    form input{
+        height: 4vh;
+        width: 32vw;
+    }
+}
+@media(max-width: 702px){
+    .phone-number{
+        margin-left: 20vw;
+    }
+    form input{
+        height: 4vh;
+        width: 40vw;
+    }
+    form button{
+        text-align: center;
+        width: 12vw;
+        margin-top: 3vh;
+        border-radius: 15%;
+    }
+}
+@media(max-width: 493px){
+    .two-part{
+        height: 70vh;
+        margin-top: 5vh;
+    }
+    .via-social-media a .facebook-icon{
+        font-size: 1.7rem;
+    }
+    .via-social-media a .instagram-icon{
+        font-size: 1.7rem;
+    }
+    .via-social-media a .linkedIn-icon{
+        font-size: 1.7rem;
+    }
+    .phone-number .whatsapp-icon{
+        font-size: 1.7rem;
+    }
+    .phone-number .phone-icon{
+        font-size: 1.6rem;
+    }
+    .phone-number a h3{
+        font-size: 1.2rem;
+    }
+    .right-part h3{
+        font-size: 1.5rem;
+    }
+    form input{
+        height: 4vh;
+        width: 45vw;
+        margin-bottom: 2vh;
+    }
+    form button{
+        text-align: center;
+        width: 12vw;
+        margin-top: 3vh;
+        border-radius: 15%;
+    }
+}
+@media(max-width: 438px){
+    .via-social-media a{
+        text-decoration: none;
+        padding: 1rem;
+    }
+    .phone-number{
+        margin-left: 13vw;
+    }
+    form input{
+        height: 3.5vh;
+        width: 50vw;
+        margin-bottom: 1.5vh;
+    }
+    form button{
+        text-align: center;
+        width: 16vw;
+        margin-top: 3vh;
+        border-radius: 15%;
+    }
+}
+@media(max-width: 340px){
+    .small-nav button a{
+        font-size: 0.8rem;
+    }
+    .via-social-media a .facebook-icon{
+        font-size: 1.3rem;
+    }
+    .via-social-media a .instagram-icon{
+        font-size: 1.3rem;
+    }
+    .via-social-media a .linkedIn-icon{
+        font-size: 1.3rem;
+    }
+    .phone-number .whatsapp-icon{
+        font-size: 1.4rem;
+    }
+    .phone-number .phone-icon{
+        font-size: 1.4rem;
+    }
+    .phone-number a h3{
+        font-size: 1rem;
+    }
+    .right-part h3{
+        font-size: 1.2rem;
+    }
+    form input{
+        height: 3vh;
+        width: 60vw;
+        margin-bottom: 1.4vh;
+        border-radius: 5%;
+    }
+    form button{
+        text-align: center;
+        width: 20vw;
+        margin-top: 3vh;
+        border-radius: 15%;
+    }
+}
+
