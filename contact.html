@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="/portfolio/contact.css">
+</head>
+<body>
+    <div id="main">
+        <div class="nav">
+            <div class="small-nav">
+                <button><a href="/portfolio/index.html">Go to Home</a></button>
+                <button><a href="/portfolio/about.html">About</a></button>
+                <button><a href="/portfolio/academic.html">Academic</a></button>
+                <button><a href="/portfolio/projects.html">Project</a></button>
+            </div>
+        </div>
+        <div class="contact-me">
+            <div class="two-part">
+                <div class="left-part">
+                    <div class="via-social-media">
+                        <a href="https://www.facebook.com/Sayan.Bhattacharjee.2000"><i class="facebook-icon ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/bhattacharjee2019/"><i class="instagram-icon ri-instagram-line"></i></a>
+                        <a href="https://www.linkedin.com/in/sayan-bhattacherjee-33789b248/?profileId=ACoAAD1bBRsB_z1PYMsRXmKDxi9sRkHv7USrmh0"><i class="linkedIn-icon ri-linkedin-fill"></i></a>
+                    </div>
+                    <div class="phone-number">
+                        <i class=" whatsapp-icon ri-whatsapp-line"></i>
+                        <i class="phone-icon ri-phone-line"></i>
+                        <a href="tel:+916290571451" class="phone-link"><h3>+91-6290571451</h3></a>
+                    </div> 
+                </div>
+                <div class="vertical-line"></div>
+                <div class="right-part">
+                    <h3>Get in Touch</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm()">
+                        <input type="hidden" name="access_key" value="f7ef35c3-6424-4e49-84be-c745a9e3c39f">
+                        <input type="text" name="name" id="p_name" placeholder="Your name" required>
+                        <input type="email" name="email" id="p_email" placeholder="Email id" required>
+                        <input type="text" name="phone" id="p_phone" placeholder="Phone no" required>
+                        <textarea name="message" id="p_message" placeholder="Enter your message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        function animation(){
+            gsap.from(".small-nav",{
+            y: -30,
+            opacity: 0,
+            delay: 0.2,
+            duration: 1.5,
+            })
+            gsap.from(".left-part",{
+                x: -40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 1.5,
+            })
+            gsap.from(".right-part",{
+                x: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 1.5,
+            })
+        }
+        animation()
+
+        function validateForm() {
+            return validateName() && validateNumber() && validateMessage();
+        }
+
+        function validateName(){
+            let nameElement = document.querySelector("#p_name");
+            let nameValue = nameElement.value;
+
+            if(nameValue.length == 0){
+                nameElement.placeholder = "Name cannot be empty";
+                nameElement.value = "";
+                return false;
+            }
+            if(!nameValue.match(/^[A-Za-z]+\s[A-Za-z]+$/)){
+                nameElement.placeholder = "!Please Enter full name!";
+                nameElement.value = "";
+                return false;
+            }
+            return true;
+        }
+
+        function validateNumber() {
+            let phoneNumberElement = document.querySelector("#p_phone");
+            let phoneNumberValue = phoneNumberElement.value;
+
+            if (phoneNumberValue.length !== 10) {
+                phoneNumberElement.placeholder = "Please enter a 10 digit number";
+                phoneNumberElement.value = "";
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(phoneNumberValue)) {
+                phoneNumberElement.placeholder = "Please enter a valid 10 digit number";
+                phoneNumberElement.value = "";
+                return false;
+            }
+            return true;
+        }
+
+        function validateMessage(){
+            let messageElement = document.querySelector("#p_message")
+            if(messageElement.value != 10){
+                messageElement.placeholder = "Please enter 10 characters"
+                messageElement.value = ""
+                return false
+            }
+            return true
+        }
+    </script>
+</body>
+</html>
