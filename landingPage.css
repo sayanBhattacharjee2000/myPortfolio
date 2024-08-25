@@ -301,7 +301,7 @@ hr {
 .image-and-text .image {
   height: 50vh;
   width: 25vw;
-  background-image: url("Portfilo-myMainImage.jpeg");
+  background-image: url("Portfolio-myMainImage.jpeg");
   border-radius: 50%;
   background-size: cover;
   background-position: top;
