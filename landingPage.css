@@ -17,7 +17,6 @@ html body {
 #nav-bar {
   width: 100%;
   display: flex;
-  /* background-color: #2e4374; */
   background-color: #4d4c7d;
   align-items: center;
   justify-content: space-between;
