@@ -87,3 +87,6 @@ function animationOfText() {
   });
 }
 animationOfText();
+document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+})
