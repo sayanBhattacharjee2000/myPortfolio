@@ -6,34 +6,293 @@
 html, body{
     height: 100%;
     width: 100%;
-    background-color:rgba(23, 22, 22, 0.9);
-    overflow: auto;
+    overflow: hidden;
+}
+#nav-bar {
+  width: 100%;
+  display: flex;
+  background-color: #4d4c7d;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5vh;
+  padding-bottom: 2vh;
+  border-bottom: 4mm ridge rgba(155, 200, 241, 0.3);
+}
+
+.nav-bar_part-1 h3 {
+  font-family: "Bodoni Moda SC", serif;
+  margin-left: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+  cursor: not-allowed;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+}
+
+.nav-bar_part-2-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-right: 30px;
+}
+
+.nav-bar_part-3 {
+  margin-bottom: 8px;
+  margin-right: 20px;
+}
+
+.nav-bar_part-3 .menu-icon1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  border: 3px solid black;
+  padding-top: 5px ;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+
+.nav-bar_part-3 .menu-icon1:hover {
+  font-size: 25px;
+  box-shadow: 0 0 15px 3px rgba(89, 88, 88, 0.5);
+}
+
+.nav-bar_part-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
+}
+
+.nav-bar_part-2 a {
+  text-decoration: none;
+  color: rgb(166, 160, 160);
+  position: relative;
+}
+
+.nav-bar_part-2 a h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  opacity: 1;
+}
+
+.nav-bar_part-2 a h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: rgb(191, 63, 95);
+  transition: all ease 0.3s;
+}
+
+.nav-bar_part-2 a h3:hover::after {
+  width: 100%;
+}
+
+.nav-bar_part-2 i:hover {
+  cursor: wait;
+}
+
+.nav-bar_part-3 i:hover {
+  cursor: wait;
+}
+
+.forLargeScreen {
+  font-size: 30px;
+}
+
+.ri-moon-fill {
+  font-size: 30px;
+}
+
+#side-bar .menu-icon2 {
+  position: absolute;
+  top: 10px;
+  font-size: 25px;
+  border: 2px solid #5ac2db;
+  padding: 2.5px 5px;
+  border-radius: 50%;
+}
+
+#side-bar .menu-icon2:hover {
+  font-size: 25px;
+  box-shadow: 0 0 15px 3px rgba(89, 88, 88, 0.5);
+}
+
+hr {
+  margin-right: 15px;
+}
+
+.side-bar_part-1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  box-shadow: 0 0 15px 3px rgba(89, 88, 88, 0.5);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  padding-top: 50px;
+  padding-left: 10px;
+  background-color: rgb(32, 0, 128, 0.4);
+}
+
+.side-bar_part-1 a {
+  text-decoration: none;
+  color: rgb(221, 211, 211);
+  font-weight: 100;
+  position: relative;
+}
+
+.side-bar_part-1 a h3 {
+  font-size: 20px;
+  opacity: 1;
+  padding: 15px 5px;
+  
+}
+
+.side-bar_part-1 a h3:hover {
+  box-shadow: 0 0 15px 3px rgba(169, 130, 53, 0.5);
+  scale: 1.05;
+  transition: all ease 0.5s;
+  border-bottom: #4d4c7d;
+}
+
+#side-bar {
+  display: none;
+}
+
+@media (min-width: 1015px) {
+  .nav-bar_part-1 h3 {
+    font-size: 3.5rem;
+  }
+
+  .nav-bar_part-2 a h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1014px) {
+  .nav-bar_part-1 a h3 {
+    font-size: 1.5px;
+  }
+
+  .nav-bar_part-2 a h3 {
+    font-size: 18px;
+  }
+
+  .nav-bar_part-2 i {
+    font-size: 15px;
+  }
+
+  .ri-moon-fill {
+    font-size: 20px;
+  }
+
+  .nav-bar_part-3 .menu-icon1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 969px) {
+  .nav-bar_part-1 h3 {
+    font-family: "Bodoni Moda SC", serif;
+    opacity: 1;
+    margin-left: 40px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media (max-width: 710px) {
+  #nav-bar {
+    display: block;
+  }
+
+  .nav-bar_part-1 h3 {
+    text-align: center;
+    margin-left: 0;
+    font-size: 3rem;
+  }
+
+  .nav-bar_part-2 a h3 {
+    font-size: 18px;
+  }
+
+  .nav-bar_part-2 {
+    margin-top: 30px;
+  }
+
+  .nav-bar_part-2-3 {
+    display: block;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 500px) {
+  .nav-bar_part-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 499px) {
+  .nav-bar_part-2 {
+    display: none;
+  }
+
+  .nav-bar_part-1 h3 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 15px;
+  }
+
+  .nav-bar_part-3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-bar_part-3 .forSmallScreen {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .nav-bar_part-3 .menu-icon1 {
+    padding: 0 5px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 334px) {
+  .nav-bar_part-1 h3 {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .nav-bar_part-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+
+  .side-bar_part-1 {
+    width: 150px;
+  }
 }
 #main{
     height: 100%;
     width: 100%;
-}
-.small-nav{
-    text-align: center;
-    padding-top: 10vh;
-}
-.small-nav button{
-    font-size: 1.3rem;
-    padding: 0.2rem;
-    margin-left: 1vw;
-    border-radius: 15%;
-    background-color: rgba(150, 150, 150, 0.8);
-}
-.small-nav button :hover{
-    font-size: 1.4rem;
-    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(45deg, #ab8989, #9f836c, #b5b386, #a1b798, #a2d0c8, #7d87b9, #a98cc7, #bd94b4, #9e6e6e);
-    transition: 0.5s;
-    padding: 0;
-}
-.small-nav button a{
-    text-decoration: none;
-    color: black;
 }
 .contact-me{
     height: 60vh;
@@ -114,7 +373,7 @@ html, body{
     font-weight: 200;
 }
 .phone-number h3{
-    color: white;
+    color: rgb(208, 134, 134);
     font-weight: 100;
 }
 .phone-number{
@@ -146,7 +405,7 @@ html, body{
     margin-top: 3vh;
     margin-bottom: 3vh;
     font-size: 2rem;
-    -webkit-text-stroke: 1.5px rgb(20, 20, 20);
+    -webkit-text-stroke: 1px rgb(20, 20, 20);
 }
 form{
     display: flex;
@@ -160,6 +419,7 @@ form input{
     border: 0;
     border-radius: 15%;
     margin-bottom: 3vh;
+    border: 1px solid rgb(188, 126, 136);
 }
 form input:hover{
     background-color: #bed1b7;
@@ -189,69 +449,6 @@ form button:hover{
     color: white;
     scale: 1.1;
 }
-@media(max-width: 2800px){
-    .small-nav button a{
-        font-size: 2rem;
-    }
-    .right-part h3{
-        font-size: 2.8rem;
-    }
-    form input{
-        height: 6vh;
-    }
-    form button{
-        padding: 1rem;
-        width: 6vw;
-    }
-    .phone-number{
-        margin-left: 12vw;
-    }
-}
-@media(max-width:2296px){
-    .phone-number{
-        margin-left: 11vw;
-    }
-}
-@media(max-width:1930px){
-    .phone-number{
-        margin-left: 10vw;
-    }
-}
-@media(max-width: 1800px){
-    .small-nav button a{
-        font-size: 1.7rem;
-    }
-    .right-part h3{
-        font-size: 2.3rem;
-    }
-    form input{
-        height: 5.5vh;
-    }
-    form button{
-        padding: 0.7rem;
-        width: 5.5vw;
-    } 
-}
-@media(max-width:1600px){
-    .phone-number{
-        margin-left: 9vw;
-    }
-}
-@media(max-width:1523px){
-    .small-nav button a{
-        font-size: 1.3rem;
-    }
-    .right-part h3{
-        font-size: 2rem;
-    }
-    form input{
-        height: 5vh;
-    }
-    form button{
-        padding: 0.5rem;
-        width: 5vw;
-    } 
-}
 @media(max-width:1400px){
     .phone-number{
         margin-left: 8.5vw;
@@ -265,9 +462,6 @@ form button:hover{
 @media(max-width:1200px){
     .phone-number{
         margin-left: 7.5vw;
-    }
-    .small-nav button a{
-        font-size: 1.1rem;
     }
     .right-part h3{
         font-size: 1.8rem;
@@ -296,16 +490,15 @@ form button:hover{
         width: 70vw;
     }
     .left-part{
+        margin-top: 10vh;
         height: 25vh;
         width: 70vw;
         position: relative;
     }
     .right-part{
+        margin-top: 10vh;
         height: 65vh;
         width: 70vw;
-    }
-    .small-nav{
-        padding-top: 4vh;
     }
     .phone-number{
         display: flex;
@@ -410,9 +603,6 @@ form button:hover{
     }
 }
 @media(max-width: 340px){
-    .small-nav button a{
-        font-size: 0.8rem;
-    }
     .via-social-media a .facebook-icon{
         font-size: 1.3rem;
     }
