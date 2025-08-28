@@ -19,41 +19,73 @@ hideSideBar();
 function changeBackgroundColor_forLargeScreen() {
   let toggle = document.querySelector(".forLargeScreen");
   let body = document.querySelector("body");
+  let table = document.querySelector("table");
+
   toggle.addEventListener("click", function () {
     this.classList.toggle("ri-moon-fill");
+
     if (this.classList.toggle("ri-sun-fill")) {
       body.style.backgroundColor = "white";
       body.style.color = "black";
       body.style.transition = "1s";
+
+      if (table) table.style.border = "3px solid black";
+      document.querySelectorAll("table td, table th").forEach(cell => {
+        cell.style.border = "1px solid black";
+      });
     } else {
       body.style.backgroundColor = "black";
       body.style.color = "white";
       body.style.transition = "1s";
+
+      if (typeof sideBarMenuIcon !== "undefined") {
+        sideBarMenuIcon.style.border = "2px solid white";
+      }
+
+      if (table) table.style.border = "3px solid white";
+      document.querySelectorAll("table td, table th").forEach(cell => {
+        cell.style.border = "1px solid white";
+      });
     }
   });
 }
 changeBackgroundColor_forLargeScreen();
 
+
 function changeBackgroundColor_forSmallScreen() {
   let toggle = document.querySelector(".forSmallScreen");
   let body = document.querySelector("body");
   let sideBarMenuIcon = document.querySelector(".menu-icon2");
-  let name = document.querySelector(".name");
+  let table = document.querySelector("table");
+
   toggle.addEventListener("click", function () {
     this.classList.toggle("ri-moon-fill");
+
     if (this.classList.toggle("ri-sun-fill")) {
       body.style.backgroundColor = "white";
       body.style.color = "black";
       body.style.transition = "1s";
+
+      if (table) table.style.border = "3px solid black";
+      document.querySelectorAll("table td, table th").forEach(cell => {
+        cell.style.border = "1px solid black";
+      });
     } else {
       body.style.backgroundColor = "black";
       body.style.color = "white";
-      sideBarMenuIcon.style.border = "2px solid white";
       body.style.transition = "1s";
+
+      sideBarMenuIcon.style.border = "2px solid white";
+
+      if (table) table.style.border = "3px solid white";
+      document.querySelectorAll("table td, table th").forEach(cell => {
+        cell.style.border = "1px solid white";
+      });
     }
   });
 }
 changeBackgroundColor_forSmallScreen();
+
 
 function animationOfNavbar() {
   let navBarAnimation = gsap.timeline();
@@ -87,6 +119,7 @@ function animationOfText() {
   });
 }
 animationOfText();
+
 document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
+  e.preventDefault();
 })
