@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"/>
     <link rel="stylesheet" href="contact.css">
+    
 </head>
 <body>
-    <div id="main">
-        <div class="nav">
-            <div class="small-nav">
-                <button><a href="index.html">Go to Home</a></button>
-                <button><a href="about.html">About</a></button>
-                <button><a href="academic.html">Academic</a></button>
-                <button><a href="projects.html">Project</a></button>
+    <div id="nav-bar">
+            <div class="nav-bar_part-1">
+                <h3>My Portfolio</h3>
+            </div>
+            <div class="nav-bar_part-2-3">
+                <div class="nav-bar_part-2">
+                    <a href="index.html"><h3>Home</h3></a>
+                    <a href="about.html"><h3>About</h3></a>
+                    <a href="academic.html"><h3>Academic</h3></a>
+                    <a href="projects.html"><h3>Projects</h3></a>
+                    <i class="forLargeScreen ri-sun-fill"></i>
+                </div>
+                <div class="nav-bar_part-3">
+                    <i class="forSmallScreen ri-sun-fill"></i>
+                    <i class="menu-icon1 ri-menu-2-line"></i>
+                </div>
             </div>
         </div>
+        <div id="side-bar">
+            <div class="side-bar_part-1">
+                <i class="menu-icon2 ri-menu-3-line"></i>
+                <hr />
+                <a href="about.html"><h3>About Me</h3></a>
+                <hr />
+                <a href="academic.html"><h3>Academic</h3></a>
+                <hr />
+                <a href="projects.html"><h3>Projects</h3></a>
+                <hr />
+                <a href="contact.html"><h3>Contact</h3></a>
+            </div>
+        </div>
+    <div id="main">
         <div class="contact-me">
             <div class="two-part">
                 <div class="left-part">
@@ -49,6 +73,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="landingPage.js"></script>
     <script>
         function animation(){
             gsap.from(".small-nav",{
@@ -110,9 +135,16 @@
             }
             return true;
         }
-        document.addEventListener("contextmenu", function(e){
-            e.preventDefault();
-        })
+
+        function validateMessage(){
+            let messageElement = document.querySelector("#p_message")
+            if(messageElement.value != 1){
+                messageElement.placeholder = "Please enter at least one character"
+                messageElement.value = ""
+                return false
+            }
+            return true
+        }
     </script>
 </body>
 </html>
